@@ -4,11 +4,13 @@
 
 int main()
 {
-	std::shared_ptr<IBuilder> builder(new ConcreteBuilder);
+	IBuilder*	builder = new ConcreteBuilder();
 	Director	director(builder);
-	director.makeProduct(E_TYPE::WITH_ABC);
-	std::shared_ptr<Product> product = builder->getProduct();
-	///TODO: make simple this code axpor pes!! You dont have enough RAM!!
+	director.makeProduct(PRODUCT_TYPE::WITH_AB);
+	Product	product = builder->getProduct();
+	
+
+	delete builder;
 	return 0;
 }
 

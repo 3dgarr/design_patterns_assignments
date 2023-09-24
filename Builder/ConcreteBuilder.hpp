@@ -8,18 +8,18 @@ class ConcreteBuilder
 	:	public	IBuilder
 {
 	public:
-		void	reset()			override;
-		void	buildPartA()	override;
-		void	buildPartB()	override;
-		void	buildPartC()	override;
-		std::shared_ptr<Product>	getProduct()	override;
+		void		reset()			override;
+		IBuilder*	buildPartA()	override;
+		IBuilder*	buildPartB()	override;
+		IBuilder*	buildPartC()	override;
+		Product&	getProduct()	override;
 
 
 		ConcreteBuilder() = default;
-		~ConcreteBuilder() = default;
+		~ConcreteBuilder();
 
 	private:
-		std::shared_ptr<Product>	m_product;
+		Product*	m_product;
 };
 
 

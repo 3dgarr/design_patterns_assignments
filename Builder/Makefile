@@ -2,7 +2,7 @@ CXX			= c++
 NAME		= builder
 SRCS		= $(wildcard *.cpp)
 OBJS		= $(SRCS:.cpp=.o)
-CXXFLAGS	= -Wall -Wextra -Werror -fsanitize=thread -g3 -std=c++11 
+CXXFLAGS	= -Wall -Wextra -Werror  -g3 -std=c++11 
 
 %.o:%.cpp $(wildcard *.hpp)
 	$(CXX) $(CXXFLAGS) -c $< -o $@

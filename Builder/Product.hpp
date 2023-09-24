@@ -3,6 +3,17 @@
 
 #include <string>
 
+enum	PRODUCT_TYPE
+{
+	WITH_A,
+	WITH_B,
+	WITH_C,
+	WITH_AB,
+	WITH_AC,
+	WITH_BC,
+	WITH_ABC,
+};
+
 class Product
 {
 	public:

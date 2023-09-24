@@ -6,11 +6,13 @@
 class IBuilder
 {
 	public:
-		virtual void	reset()      = 0;
-		virtual	void	buildPartA() = 0;
-		virtual	void	buildPartB() = 0;
-		virtual	void	buildPartC() = 0;
-		virtual	std::shared_ptr<Product>	getProduct() = 0;
+		virtual	Product&	getProduct() = 0;
+	
+	public:
+		virtual void		reset()      = 0;
+		virtual	IBuilder*	buildPartA() = 0;
+		virtual	IBuilder*	buildPartB() = 0;
+		virtual	IBuilder*	buildPartC() = 0;
 
 	public:
 		IBuilder() = default;
